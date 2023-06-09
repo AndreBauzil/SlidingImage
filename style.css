@@ -1,0 +1,29 @@
+/* h1 {
+    color: white;
+} */
+
+body {
+    height: auto;
+    width: auto;
+    background-color: black;
+    margin: 0rem;  /* no scroll bar */
+    overflow: hidden;   
+}
+
+/* Brings the elements of the class 'image' inside the parent with id 'image-track' from the DOM */
+#image-track > .image {
+    width: 40vmin;      /* Width is 40% of viewport minimum */
+    height: 56vmin;     /* Height is 56% of viewport minimum */
+    object-fit: cover;  /* Aspect Ratio */
+    object-position: center;    /* Position centered */
+}
+
+/* Line it up, side-by-side */
+#image-track {
+    display: flex;
+    gap: 4vmin;     /* Space between images */
+    position: absolute; /* To set left and top on center */
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -50%);     /* Translate because top doesn't looked nice */
+}
